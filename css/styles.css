@@ -1,61 +1,189 @@
-/* AQUÍ EMPEZAMOS MEDIA QUERIES 768 MOBILE FIRST*/
-
-*{
-    margin: 0;  
+* {
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 body {
-    background-color: rgb(236, 217, 200);
-    font-family: Arial, Helvetica, sans-serif;
- }
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(18, 2, 28);
+    color: rgb(169, 169, 160);
+}
+
+main {
+    /* MAIN: flex: 1 hace que ocupe todo el espacio que sobra del body (que es flex en columna), para que el footer vaya hasta abajo */
+    flex: 1;
+}
+
+.cabecera {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    z-index: 9999;
+    top: 0;
+    background-color: rgba(34, 90, 131, 0.429);
+}
 
 .fa-solid {
-    margin-left: 10px;
-}
-a {
-    text-decoration: none;
-    color: antiquewhite;
-    
+    font-size: 3rem;
+    margin: 20px;
+    color: rgb(196, 239, 230);
 }
 
-.cabecera p {
-    
-    color: rgb(228, 220, 225);
-    font-size: 2rem;
-    
-}
-.cabecera {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    background-color: rgba(132, 15, 15, 0.629); 
-    padding: 15px;
-        
-}
-
-ul {
-    text-align: right;  
-    
-}
 li {
     display: inline;
-    margin: 70px;   
+    list-style: none;
+    margin: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(196, 239, 230);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 300;
 }
 
 footer {
-    background-color: rgba(132, 15, 15, 0.629);
+    padding: 15px 15px;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(34, 90, 131, 0.429);
 }
-/* AQUÍ EMPEZAMOS MEDIA QUERIES 992 TABLET */
+
+.fa-regular {
+    font-size: 1rem;
+    color: rgb(196, 239, 230);
+
+}
+
+
+/* AQUÍ EMPEZAMOS MEDIA QUERIES 768 TABLET*/
+
+@media screen and (min-width: 768px) {
+
+    body {
+        background-color: rgb(44, 2, 2);
+    }
+
+    .cabecera {
+        background-color: rgba(131, 57, 34, 0.429);
+
+    }
+
+    .fa-solid {
+        color: rgb(243, 163, 163);
+    }
+
+    li {
+        margin: 50px;
+    }
+
+    a {        
+        color: rgb(243, 163, 163);
+        font-size: 1.2rem;
+    }
+
+    footer {
+        background-color: rgba(131, 57, 34, 0.429);
+    }
+
+    .fa-regular {
+        font-size: 1.5rem;
+        color: rgb(243, 163, 163);
+    }
+    footer a {
+        margin-right: 20px;
+    }
+
+}
+
+
+
+/* AQUÍ EMPEZAMOS MEDIA QUERIES 992 MINIPC */
 
 @media screen and (min-width: 992px) {
-    
+    body {
+        background-color: rgb(1, 32, 3);
+    }
+
+    .cabecera {
+        background-color: #05621e6d;
+    }
+
+    .fa-solid {
+        color: rgb(161, 238, 154);
+    }
+
+    li {
+        margin: 70px;
+    }
+
+    a {
+        color: rgb(161, 238, 154);
+    }
+
+    footer {
+        background-color: #05621e6d;
+    }
+
+    .fa-regular {
+        font-size: 1.5rem;
+        color: rgb(161, 238, 154);
+    }
+    footer a {
+        margin-right: 40px auto;
+    }
 }
 
 
 /* AQUÍ EMPEZAMOS MEDIA QUERIES 1200 ORDENADOR */
 
 @media screen and (min-width: 1200px) {
-    
+    body {
+        background-color: rgb(64, 3, 56);
+    }
+    .cabecera {
+        background-color: #b3097a6b;
+    }
+
+    .fa-solid {
+        color: rgb(233, 155, 203);
+        margin-left: 60px;
+    }
+
+    li {
+        margin: 70px;
+    }
+
+    a {
+        color: rgb(233, 155, 203);
+    }
+
+    footer {
+        background-color: #b3097a6b;
+    }
+
+    .fa-regular {
+        font-size: 1.5rem;
+        color: rgb(233, 155, 203);
+    }
+    footer a {
+        margin-right: 40px auto;
+    }
+
+    a:hover {
+        color: rgb(240, 217, 217);
+    }
+
+    .cabecera i:hover {
+        transform: scale(1.1);
+        color: rgb(240, 217, 217);
+    }
+
+    footer a:hover {
+        color: rgb(240, 217, 217);
+    }
 }
